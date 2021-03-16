@@ -6,7 +6,7 @@ export default function Button() {
   function click(val) {
     if (showcode.includes(val)) {
       setShowCode((prevState) => prevState.splice(showcode.indexOf(val), 1));
-    } else setShowCode((prevState) => prevState.concat(val));
+    } else setShowCode([...showcode,val]);
   }
   const data = [
     {
@@ -66,7 +66,7 @@ export default function Button() {
       maincode: (
         <div className="width-60">
           <div className="three-margin-top">
-            <button class="btn btn-primary btn-sm">Small Button</button>
+            <button class="btn btn-primary btn-lg">Large Button</button>
           </div>
         </div>
       ),
@@ -117,26 +117,7 @@ export default function Button() {
         </div>
       ),
     },
-    {
-      name: "Option button.",
-      desc: "Styled option buttons.",
-      excode: ` <div class="duo-buttons">
-      <button class="btn btn-danger">Cancel</button>
-      <div class="btn-or">or</div>
-      <button class="btn btn-success">Save</button>
-    </div>`,
-      maincode: (
-        <div className="width-80">
-          <div className="three-margin-top">
-            <div class="duo-buttons">
-              <button class="btn btn-danger">Cancel</button>
-              <div class="btn-or">or</div>
-              <button class="btn btn-success">Save</button>
-            </div>
-          </div>
-        </div>
-      ),
-    },
+    
     {
       name: "Positive Button",
       desc:

@@ -6,7 +6,7 @@ export default function Divider() {
   function click(val) {
     if (showcode.includes(val)) {
       setShowCode((prevState) => prevState.splice(showcode.indexOf(val), 1));
-    } else setShowCode((prevState) => prevState.concat(val));
+    } else setShowCode([...showcode,val]);
   }
   const data = [
     {

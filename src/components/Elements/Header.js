@@ -7,7 +7,7 @@ export default function Header() {
   function click(val) {
     if (showcode.includes(val)) {
       setShowCode((prevState) => prevState.splice(showcode.indexOf(val), 1));
-    } else setShowCode((prevState) => prevState.concat(val));
+    } else setShowCode([...showcode,val]);
   }
   return (
     <div className="component">
