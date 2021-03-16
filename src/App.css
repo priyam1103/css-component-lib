@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
   display: flex;
+  flex-direction: row;
+}
+.content {
+  width: 70%;
+  position: relative;
+  left: 22%;
+}
+
+.sidebar {
+  position: fixed;
+  width: 20%;
+  overflow: scroll;
+  min-width: 200px;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #1b1c1d;
+  display: flex;
+  z-index: 5000;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  transform: translateX(-100%);
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+.sidebar::-webkit-scrollbar {
+  width: 10px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+.sidebar .header {
+  padding: 0.5em 1.33333333em;
+  color: white;
+  text-decoration: none;
+}
+.sidebar .item {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 0.85714286em;
+  padding: 0.4em 1.33333333em;
+}
+
+.sidebar .bold {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+hr {
+  border: none;
+  outline: none;
+  opacity: 0.5;
+  height: 0.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.component {
+  margin: 2rem 0 5rem 5rem;
+}
+.component .header {
+}
+.component .header .name {
+}
+
+.component .header .description {
+  margin-top: 1rem;
+}
+
+.component .border-margin {
+  border-top: 1px solid #e0e1e2;
+  width: 90%;
+  margin: 2rem 0.5rem;
+}
+.component .border {
+  border-top: 1px solid #e0e1e2;
+  width: 90%;
+  margin: 0.2rem 0.5rem;
+}
+
+.component .sub-header {
+}
+.component .sub-header .name {
+}
+
+.component .sub-element {
+  margin: 3rem 0 0 0;
+}
+
+.three-margin-top {
+  margin: 3rem 0 0 0;
+}
+.example-hr-space {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.width-80 {
+  width: 80%;
+}
+.height-300px {
+  height: 300px;
+}
+
+.component .sub-element .head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.code-example {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.code-example .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 20px;
+  padding: 0.3rem 0.5rem;
+}
+
+.code-example .content {
+  padding: 1rem;
+  width: 40%;
+  margin-left: -150px;
+}
+.app-navbar {
+  display: none;
+}
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.8;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+@media only screen and (min-width: 501px) {
+  .sidebar.open-width {
+    transform: translateX(0);
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (max-width: 500px) {
+  /* .sidebar {
+    display: none;
+  } */
+  .route-comp {
+    width: 95%;
+    left: 0;
+    margin: 0 0.5rem;
+    overflow: hidden;
+  }
+  .app-navbar {
+    display: block;
+    width: 100%;
+    height: 40px;
+    z-index: 6000;
+
+    background-color: #1b1c1d;
+  }
+  .component {
+    margin: 0;
+  }
+  .width-20 {
+    width: 100%;
+  }
+
+  .width-60 {
+    width: 100%;
+  }
+
+  .width-80 {
+    width: 100%;
+  }
+  .component .sub-element {
+    margin: 3rem 0 0 0;
+  }
+  .main {
+    display: block;
+  }
+  .content {
+    width: 100%;
+    position: static;
   }
 }
