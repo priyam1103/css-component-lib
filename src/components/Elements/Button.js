@@ -5,7 +5,7 @@ export default function Button() {
   const [showcode, setShowCode] = useState([]);
   function click(val) {
     if (showcode.includes(val)) {
-      setShowCode((prevState) => prevState.splice(showcode.indexOf(val), 1));
+      setShowCode((prevState) => prevState.splice(prevState.indexOf(val), 1));
     } else setShowCode([...showcode,val]);
   }
   const data = [
