@@ -199,6 +199,7 @@ width: 90%;
   }
   .component {
     margin: 0;
+    padding-bottom: 20px;
   }
   .width-20 {
     width: 100%;
