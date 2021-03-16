@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import "semantic-ui-css/semantic.min.css";
 import Backdrop from "./components/Backdrop";
+import GetStarted from "./components/GetStarted";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AppNavbar from "./components/AppNavbar";
 import Sidebar from "./components/Sidebar";
@@ -40,6 +41,9 @@ function App() {
             <AppNavbar setOpenDrawer={setOpenDrawer} show={open_drawer} />
             <div className="route-comp">
               <Switch>
+                <Route path="/" exact>
+                  <GetStarted/>
+                </Route>
                 <Route path="/buttons">
                   <Button />
                 </Route>

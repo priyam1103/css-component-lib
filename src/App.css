@@ -38,6 +38,12 @@
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
 }
+.app-nav-header{
+  padding: 0.3em 1.33333333em;
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
 .sidebar .header {
   padding: 0.5em 1.33333333em;
   color: white;
@@ -92,6 +98,7 @@ hr {
 }
 
 .component .sub-element {
+  
   margin: 3rem 0 0 0;
 }
 
@@ -129,24 +136,32 @@ hr {
 .code-example {
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  overflow: scroll;
+position: relative;
+width: 90%;
+
 }
 
 .code-example .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  
   background-color: rgba(0, 0, 0, 0.25);
-  height: 20px;
+  height: 30px;
+  width:120px;
   padding: 0.3rem 0.5rem;
 }
 
 .code-example .content {
+  margin-top: 30px;
   padding: 1rem;
-  width: 40%;
+  width: 100%;
   margin-left: -150px;
 }
 .app-navbar {
   display: none;
+
 }
 .backdrop {
   position: fixed;
@@ -174,7 +189,8 @@ hr {
     overflow: hidden;
   }
   .app-navbar {
-    display: block;
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: 40px;
     z-index: 6000;
@@ -186,6 +202,9 @@ hr {
   }
   .width-20 {
     width: 100%;
+  }.code-example .content {
+    
+    margin-left: 10px;
   }
 
   .width-60 {

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import copy from "copy-to-clipboard";
+import { Icon } from "semantic-ui-react";
 
 export default function Header() {
   const [showcode, setShowCode] = useState([]);
@@ -26,7 +27,11 @@ export default function Header() {
             <h3>Header</h3>
             <p className="description">Different sizes of header.</p>
           </div>
-          <div onClick={() => click("1")}>Code</div>
+          <div onClick={() => click("1")} ><Icon
+          name="code"
+          size="large"
+          style={{ cursor: "pointer" }}
+        /></div>
         </div>
         {showcode.includes("1") && (
           <div class="code-example">
@@ -36,7 +41,11 @@ export default function Header() {
 <h2 class="header">Second Header</h2>
 <h3 class="header">Third Header</h3>
 <h4 class="header">Fourth Header</h4>
-<h5 class="header">Fifth Header</h5>`)}>Copy</p>
+<h5 class="header">Fifth Header</h5>`)}><Icon
+              name="copy"
+              size="large"
+              style={{ cursor: "pointer" }}
+            /></p>
             </div>
             <div class="content">
               <pre>
@@ -66,13 +75,21 @@ export default function Header() {
             <h3>Centered Header</h3>
             <p className="description">Header aligned in the center , font size in rem .</p>
           </div>
-          <div onClick={() => click("2")}>Code</div>
+          <div onClick={() => click("2")} ><Icon
+          name="code"
+          size="large"
+          style={{ cursor: "pointer" }}
+        /></div>
         </div>
         {showcode.includes("2") && (
           <div class="code-example">
             <div class="header">
               <p>Example</p>
-              <p onClick={() => copy(`<p class="header centered-header">Center Aligned Header</p>`)}>Copy</p>
+              <p onClick={() => copy(`<p class="header centered-header">Center Aligned Header</p>`)}><Icon
+              name="copy"
+              size="large"
+              style={{ cursor: "pointer" }}
+            /></p>
             </div>
             <div class="content">
               <pre>

@@ -1,17 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
-import { Link, useParams, useLocation } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 const links = [
   {
     name: "Getting Started",
-        item: false,
-    doc:true
+    item: false,
+    doc: true,
   },
-  {
-    name: "Introduction",
-      item: false,
-      doc:true
-  },
+
   {
     name: "Elements",
     item: false,
@@ -30,6 +26,10 @@ const links = [
   },
   {
     name: "Image",
+    item: true,
+  },
+  {
+    name: "Input",
     item: true,
   },
   {
@@ -86,13 +86,18 @@ export default function Sidebar({ show }) {
   }
 
   return (
-    <div className={drawer_class.join(" ")}>
+      <div className={drawer_class.join(" ")}>
+          <h2 className="header">Dusky UI</h2>
       {links.map((item) => {
-        if (!item.item && item.doc===undefined ) {
+        if (!item.item && item.doc === undefined) {
           return <p className="header">{item.name}</p>;
         } else if (!item.item && item.doc) {
-            return <Link to={"/" + item.name.replace(/ /g,'').toLowerCase() + "s"} className="header">{item.name}</Link>;
-          } else if (item.item) {
+          return (
+            <Link to={"/"} className="header">
+              {item.name}
+            </Link>
+          );
+        } else if (item.item) {
           return (
             <Link
               to={"/" + item.name.toLowerCase() + "s"}

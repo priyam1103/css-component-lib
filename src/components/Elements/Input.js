@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import copy from "copy-to-clipboard";
+import { Icon } from "semantic-ui-react";
 
 export default function Header() {
   const [showcode, setShowCode] = useState([]);
@@ -26,7 +27,9 @@ export default function Header() {
             <h3>Input</h3>
             <p className="description">Standard input.</p>
           </div>
-          <div onClick={() => click("1")}>Code</div>
+          <div onClick={() => click("1")}>
+            <Icon name="code" size="large" style={{ cursor: "pointer" }} />
+          </div>
         </div>
         {showcode.includes("1") && (
           <div class="code-example">
@@ -38,7 +41,11 @@ export default function Header() {
 `)
                 }
               >
-                Copy
+                <Icon
+              name="copy"
+              size="large"
+              style={{ cursor: "pointer" }}
+            />
               </p>
             </div>
             <div class="content">
@@ -61,7 +68,9 @@ export default function Header() {
             <h3>Input</h3>
             <p className="description">Standard input with label.</p>
           </div>
-          <div onClick={() => click("8")}>Code</div>
+          <div onClick={() => click("8")}>
+            <Icon name="code" size="large" style={{ cursor: "pointer" }} />
+          </div>
         </div>
         {showcode.includes("8") && (
           <div class="code-example">
@@ -76,7 +85,11 @@ export default function Header() {
                   </div>`)
                 }
               >
-                Copy
+                <Icon
+              name="copy"
+              size="large"
+              style={{ cursor: "pointer" }}
+            />
               </p>
             </div>
             <div class="content">
@@ -106,7 +119,9 @@ export default function Header() {
             <h3>Focused Input</h3>
             <p className="description">Input in a focused state.</p>
           </div>
-          <div onClick={() => click("2")}>Code</div>
+          <div onClick={() => click("2")}>
+            <Icon name="code" size="large" style={{ cursor: "pointer" }} />
+          </div>
         </div>
         {showcode.includes("2") && (
           <div class="code-example">
@@ -124,7 +139,11 @@ export default function Header() {
                   )
                 }
               >
-                Copy
+                <Icon
+              name="copy"
+              size="large"
+              style={{ cursor: "pointer" }}
+            />
               </p>
             </div>
             <div class="content">
@@ -161,7 +180,9 @@ export default function Header() {
               Input which can show the loading state.
             </p>
           </div>
-          <div onClick={() => click("3")}>Code</div>
+          <div onClick={() => click("3")}>
+            <Icon name="code" size="large" style={{ cursor: "pointer" }} />
+          </div>
         </div>
         {showcode.includes("3") && (
           <div class="code-example">
@@ -179,7 +200,11 @@ export default function Header() {
               </div>`)
                 }
               >
-                Copy
+                <Icon
+              name="copy"
+              size="large"
+              style={{ cursor: "pointer" }}
+            />
               </p>
             </div>
             <div class="content">
@@ -217,7 +242,9 @@ export default function Header() {
               Input which throws an error due to wrong input.
             </p>
           </div>
-          <div onClick={() => click("4")}>Code</div>
+          <div onClick={() => click("4")}>
+            <Icon name="code" size="large" style={{ cursor: "pointer" }} />
+          </div>
         </div>
         {showcode.includes("4") && (
           <div class="code-example">
@@ -233,7 +260,11 @@ export default function Header() {
 `)
                 }
               >
-                Copy
+                <Icon
+              name="copy"
+              size="large"
+              style={{ cursor: "pointer" }}
+            />
               </p>
             </div>
             <div class="content">
@@ -267,7 +298,9 @@ export default function Header() {
             <h3>Disabled input</h3>
             <p className="description">Input which is disabled for the user.</p>
           </div>
-          <div onClick={() => click("5")}>Code</div>
+          <div onClick={() => click("5")}>
+            <Icon name="code" size="large" style={{ cursor: "pointer" }} />
+          </div>
         </div>
         {showcode.includes("5") && (
           <div class="code-example">
@@ -279,7 +312,11 @@ export default function Header() {
                   `)
                 }
               >
-                Copy
+                <Icon
+              name="copy"
+              size="large"
+              style={{ cursor: "pointer" }}
+            />
               </p>
             </div>
             <div class="content">
@@ -307,7 +344,9 @@ export default function Header() {
             <h3>Labeled input</h3>
             <p className="description">Input with suffix label.</p>
           </div>
-          <div onClick={() => click("6")}>Code</div>
+          <div onClick={() => click("6")}>
+            <Icon name="code" size="large" style={{ cursor: "pointer" }} />
+          </div>
         </div>
         {showcode.includes("6") && (
           <div class="code-example">
@@ -322,7 +361,11 @@ export default function Header() {
                   `)
                 }
               >
-                Copy
+                <Icon
+              name="copy"
+              size="large"
+              style={{ cursor: "pointer" }}
+            />
               </p>
             </div>
             <div class="content">
@@ -350,7 +393,9 @@ export default function Header() {
             <h3>Labeled input</h3>
             <p className="description">Input with prefix label.</p>
           </div>
-          <div onClick={() => click("7")}>Code</div>
+          <div onClick={() => click("7")}>
+            <Icon name="code" size="large" style={{ cursor: "pointer" }} />
+          </div>
         </div>
         {showcode.includes("7") && (
           <div class="code-example">
@@ -365,7 +410,11 @@ export default function Header() {
                   `)
                 }
               >
-                Copy
+                <Icon
+              name="copy"
+              size="large"
+              style={{ cursor: "pointer" }}
+            />
               </p>
             </div>
             <div class="content">

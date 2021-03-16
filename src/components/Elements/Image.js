@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from "react";
 import copy from "copy-to-clipboard";
+import { Icon } from "semantic-ui-react";
 
 export default function Image() {
   const [showcode, setShowCode] = useState([]);
@@ -27,7 +28,11 @@ export default function Image() {
             <h3>Images</h3>
             <p className="description">Different sizes of Images.</p>
           </div>
-          <div onClick={() => click("1")}>Code</div>
+          <div onClick={() => click("1")} ><Icon
+          name="code"
+          size="large"
+          style={{ cursor: "pointer" }}
+        /></div>
         </div>
         {showcode.includes("1") && (
           <div class="code-example">
@@ -40,7 +45,11 @@ export default function Image() {
 <img className="large-img" src="https://dummyimage.com/600x400/000000/fff&text=Large-Image"/>`)
                 }
               >
-                Copy
+                 <Icon
+          name="copy"
+          size="large"
+          style={{ cursor: "pointer" }}
+        />
               </p>
             </div>
             <div class="content">
@@ -79,7 +88,11 @@ export default function Image() {
               Different sizes of Images controlled by parent element.
             </p>
           </div>
-          <div onClick={() => click("2")}>Code</div>
+          <div onClick={() => click("2")} ><Icon
+          name="code"
+          size="large"
+          style={{ cursor: "pointer" }}
+        /></div>
         </div>
         {showcode.includes("2") && (
           <div class="code-example">
@@ -92,7 +105,11 @@ export default function Image() {
 <img className="large-img" src="https://dummyimage.com/600x400/000000/fff&text=Large-Image"/>`)
                 }
               >
-                Copy
+                 <Icon
+          name="copy"
+          size="large"
+          style={{ cursor: "pointer" }}
+        />
               </p>
             </div>
             <div class="content">
@@ -128,7 +145,11 @@ export default function Image() {
               Image will be have width and height same as parent element.
             </p>
           </div>
-          <div onClick={() => click("3")}>Code</div>
+          <div onClick={() => click("3")} ><Icon
+          name="code"
+          size="large"
+          style={{ cursor: "pointer" }}
+        /></div>
         </div>
         {showcode.includes("3") && (
           <div class="code-example">
@@ -141,7 +162,11 @@ export default function Image() {
                 </div>`)
                 }
               >
-                Copy
+                 <Icon
+          name="copy"
+          size="large"
+          style={{ cursor: "pointer" }}
+        />
               </p>
             </div>
             <div class="content">
@@ -169,7 +194,11 @@ export default function Image() {
               Image will be circular.
             </p>
           </div>
-          <div onClick={() => click("4")}>Code</div>
+          <div onClick={() => click("4")} ><Icon
+          name="code"
+          size="large"
+          style={{ cursor: "pointer" }}
+        /></div>
         </div>
         {showcode.includes("4") && (
           <div class="code-example">
@@ -181,7 +210,11 @@ export default function Image() {
                   `)
                 }
               >
-                Copy
+                 <Icon
+          name="copy"
+          size="large"
+          style={{ cursor: "pointer" }}
+        />
               </p>
             </div>
             <div class="content">
