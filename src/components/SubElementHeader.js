@@ -25,7 +25,7 @@ export default function SubElementHeader({
           style={{ cursor: "pointer" }}
         />
       </div>
-      {showcode.includes(eleno) && (
+      {showcode===(eleno) && (
         <div class="code-example">
           <div class="header">
             <p>Example</p>

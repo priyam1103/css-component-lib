@@ -394,11 +394,11 @@ export default function List() {
       ),
     },
   ];
-  const [showcode, setShowCode] = useState([]);
+  const [showcode, setShowCode] = useState("");
   function click(val) {
-    if (showcode.includes(val)) {
-      setShowCode((prevState) => prevState.splice(prevState.indexOf(val), 1));
-    } else setShowCode([...showcode,val]);
+    if (showcode===(val)) {
+      setShowCode("");
+    } else setShowCode(val);
   }
   return (
     <div className="component">

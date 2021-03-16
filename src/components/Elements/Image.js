@@ -4,11 +4,11 @@ import copy from "copy-to-clipboard";
 import { Icon } from "semantic-ui-react";
 
 export default function Image() {
-  const [showcode, setShowCode] = useState([]);
+  const [showcode, setShowCode] = useState("");
   function click(val) {
-    if (showcode.includes(val)) {
-      setShowCode((prevState) => prevState.splice(prevState.indexOf(val), 1));
-    } else setShowCode([...showcode,val]);
+    if (showcode===(val)) {
+      setShowCode("");
+    } else setShowCode(val);
   }
   return (
     <div className="component">
@@ -34,7 +34,7 @@ export default function Image() {
           style={{ cursor: "pointer" }}
         /></div>
         </div>
-        {showcode.includes("1") && (
+        {showcode===("1") && (
           <div class="code-example">
             <div class="header">
               <p>Example</p>
@@ -94,7 +94,7 @@ export default function Image() {
           style={{ cursor: "pointer" }}
         /></div>
         </div>
-        {showcode.includes("2") && (
+        {showcode===("2") && (
           <div class="code-example">
             <div class="header">
               <p>Example</p>
@@ -151,7 +151,7 @@ export default function Image() {
           style={{ cursor: "pointer" }}
         /></div>
         </div>
-        {showcode.includes("3") && (
+        {showcode===("3") && (
           <div class="code-example">
             <div class="header">
               <p>Example</p>
@@ -200,7 +200,7 @@ export default function Image() {
           style={{ cursor: "pointer" }}
         /></div>
         </div>
-        {showcode.includes("4") && (
+        {showcode===("4") && (
           <div class="code-example">
             <div class="header">
               <p>Example</p>
