@@ -27,12 +27,12 @@ function App() {
         <Router>
           {!open_drawer && (
             <>
-              <Sidebar show={open_drawer} />
+              <Sidebar show={open_drawer} setOpenDrawer={setOpenDrawer} />
             </>
           )}
           {open_drawer && (
             <>
-              <Sidebar show={open_drawer} />
+              <Sidebar show={open_drawer} setOpenDrawer={setOpenDrawer}/>
               <Backdrop setOpenDrawer={setOpenDrawer} show={open_drawer} />
             </>
           )}

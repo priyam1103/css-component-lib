@@ -73,7 +73,7 @@ const links = [
     item: true,
   },
 ];
-export default function Sidebar({ show }) {
+export default function Sidebar({ show ,setOpenDrawer}) {
   const location = useLocation();
   const linkname = location.pathname;
 
@@ -93,13 +93,14 @@ export default function Sidebar({ show }) {
           return <p className="header">{item.name}</p>;
         } else if (!item.item && item.doc) {
           return (
-            <Link to={"/"} className="header">
+            <Link to={"/"} className="header" onClick={()=>setOpenDrawer(false)}>
               {item.name}
             </Link>
           );
         } else if (item.item) {
           return (
             <Link
+            onClick={()=>setOpenDrawer(false)}
               to={"/" + item.name.toLowerCase() + "s"}
               className={
                 linkname === "/" + item.name.toLowerCase() + "s"

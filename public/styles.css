@@ -302,7 +302,7 @@ img {
 .input-loader {
   border: none;
   outline: none;
-  width: 200px;
+  width: 215px;
   padding: 0.7rem;
 }
 .error-input {
@@ -934,7 +934,7 @@ margin: 0.3rem;
   }
   .input-loader {
     
-    width: 75%;
+    width: 90%;
     
   }
   .icon-input {

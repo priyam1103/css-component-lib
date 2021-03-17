@@ -70,7 +70,8 @@ hr {
 }
 
 .component {
-  margin: 2rem 0 5rem 5rem;
+  margin: 5rem 0 5rem 5rem;
+  
 }
 .component .header {
 }
@@ -189,6 +190,7 @@ width: 90%;
     overflow: hidden;
   }
   .app-navbar {
+    position: fixed;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -200,6 +202,7 @@ width: 90%;
   .component {
     margin: 0;
     padding-bottom: 20px;
+    padding-top: 4rem;
   }
   .width-20 {
     width: 100%;
